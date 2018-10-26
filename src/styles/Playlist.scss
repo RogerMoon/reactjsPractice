@@ -1,0 +1,58 @@
+.Container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top:20px;
+    .playlist{
+        width: inherit;
+    }
+    .side1{
+        padding:5px;
+        .title{
+            color:whitesmoke;
+            .noteIcon{
+                margin-right: 10px;
+                color: darkgray;
+            }
+            &.songPlaying{
+                color: green;
+                .noteIcon{
+                    display: none;
+                }
+            }
+            .pauseIcon{
+                display:none;
+            }
+            .playIcon{
+                display:none;
+            }
+        }
+        .info{
+            margin-left: 20px;
+            color: darkgray;
+        }
+        .explicit{
+            background-color: darkgray;
+            color: black
+        }
+    }
+    .side1:hover{
+        background-color:rgb(28, 28, 68);
+
+        .noteIcon{
+            display:none;
+        }
+        .pauseIcon {
+            margin-right: 10px;
+            display:inline-block;
+        }
+        .playIcon{
+            margin-right: 10px;
+            display:inline-block;
+        }
+        .speakerIcon{
+            display:none;
+        }
+    }
+}

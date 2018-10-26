@@ -1,0 +1,15 @@
+@font-face {
+  font-family: tryout-regular;
+  src: url('./fonts/tryout-regular.ttf');
+}
+
+@font-face {
+  font-family: tryout-icons;
+  src: url('./fonts/tryout-icons.ttf');
+}
+
+body {
+  font-family: tryout-regular;
+  background-color: rgb(73, 73, 176);
+  color: black;
+}

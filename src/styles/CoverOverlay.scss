@@ -1,0 +1,32 @@
+.playOverlay{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background:rgba(0, 0, 0, .6);
+        .playIcon{
+            position: absolute;
+            margin: auto;
+            top: 132px;
+            left: 137px;
+            width: 35px;
+            height:35px;
+
+        }
+    }
+        
+.pauseOverlay{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    background:rgba(0, 0, 0, .6);
+        .pauseIcon{
+            position: absolute;
+            margin: auto;
+            top: 132px;
+            left: 133px;
+            width: 35px;
+            height:35px;
+
+        }
+    
+    }
