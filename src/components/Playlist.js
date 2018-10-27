@@ -3,7 +3,7 @@ import '../styles/Playlist.scss';
 import { ReactComponent as Play } from '../icons/play.svg';
 import { ReactComponent as Pause } from '../icons/pause.svg';
 import { ReactComponent as Speaker } from '../icons/speaker.svg';
-
+import { Dropdown, MenuItem } from 'react-bootstrap/lib'
 
 export default class Playlist extends Component{
     constructor(props) {
@@ -83,7 +83,6 @@ export default class Playlist extends Component{
                 this.setState({pause:false});
             }
         })
-        debugger;
 
         
     }
@@ -99,12 +98,22 @@ export default class Playlist extends Component{
                                 <div className="playlistContainer">
                                     <div className="side1" onClick={this.clickPlay.bind(this,list.title)}>
                                         <div className={"title " + (list.playing || list.pause ? "songPlaying" : null)}> 
-                                            {list.playing ? <Speaker className="speakerIcon" /> : <span className="noteIcon">&#9834;</span>}
+                                            {list.playing ? <Speaker className="speakerIcon icon" /> : <span className="noteIcon">&#9834;</span>}
                                             {list.playing && !list.pause ? <Pause className="pauseIcon" /> : <Play className="playIcon" />}   
                                             {list.title}
                                             
                                         </div>
                                         <div className="info">{list.explicit ? <span className="explicit"> EXPLICIT </span> : null}{list.artist} <span>&#8226;</span> {list.album} </div>
+                                    </div>
+                                    <div className="side2">
+                                        <Dropdown id="dropdown" className="dropContainer" pullRight>
+                                            <Dropdown.Toggle className="dropToggle" noCaret >...</Dropdown.Toggle>
+                                            <Dropdown.Menu className="dropMenu" >
+                                                <MenuItem >Option 1</MenuItem>
+                                                <MenuItem >Option 2</MenuItem>
+                                                <MenuItem >Option 3</MenuItem>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </div>
                                 </div>
                             </div>

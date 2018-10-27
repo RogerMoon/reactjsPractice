@@ -9,6 +9,7 @@
     }
     .side1{
         padding:5px;
+        float: left;
         .title{
             color:whitesmoke;
             .noteIcon{
@@ -19,6 +20,13 @@
                 color: green;
                 .noteIcon{
                     display: none;
+                }
+                .playIcon{
+                    margin-right: 10px;
+                    display: inline-block;
+                }
+                .icon{
+                    margin-right: 10px;
                 }
             }
             .pauseIcon{
@@ -37,7 +45,37 @@
             color: black
         }
     }
-    .side1:hover{
+    .side2{
+        float:right;
+            .dropContainer {
+                display: none;
+                .dropToggle {
+                    background-color: transparent;
+                    border: none;
+                    color: #ffffff;
+                    font-size: 20px;
+                    
+                }
+            }
+            .dropMenu {
+                background-color: black;
+                li a{
+                     color: darkgrey;
+                    &:hover {
+                        color: grey;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .dropContainer {
+                display: block;
+                color: #ffffff;
+            }
+        }
+    
+    .playlist:hover{
         background-color:rgb(28, 28, 68);
 
         .noteIcon{
